@@ -1,0 +1,7 @@
+.tabela{
+    display: flex;
+    justify-content: center;
+}
+.column{
+    display: inline-flex;
+}

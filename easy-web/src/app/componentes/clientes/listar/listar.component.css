@@ -1,0 +1,14 @@
+.tamanho{
+    display: flex;
+    justify-content: center;
+}
+.alinhamento{
+    display: flex;
+    text-align: center;
+}
+.button{
+    display: flex;
+
+    justify-content: flex-end;
+}
+

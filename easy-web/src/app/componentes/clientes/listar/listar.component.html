@@ -1,0 +1,48 @@
+<div class="tamanho ">
+     <div ngFor class=" alinhamento shadow-lg p-3 mb-5 bg-body rounded ">
+         <div>
+              <table  class="table border ">
+                    <thead class="table-dark">
+                    <tr>
+                         <th scope="col" class="border">nome</th>
+                         <th scope="col" class="border">cpf</th>
+                         <th scope="col" class="border">telefone</th>
+                         <th scope="col" class="border">email</th>
+                         <th scope="col" class="border">profissao</th>
+                         <th scope="col" class="border">renda</th>
+                         <th scope="col" class="border">status</th>
+                         <th scope="col" class="border">rua</th>
+                         <th scope="col" class="border">numero</th>
+                         <th scope="col" class="border">complemento</th>
+                         <th scope="col" class="border">bairro</th>
+                         <th scope="col" class="border">cidade</th>
+                         <th scope="col" class="border">estado</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                         <tr *ngFor="let clientes of cliente">
+                              <td class="border">{{clientes.nome}}</td>
+                              <td class="border">{{clientes.cpf}}</td>
+                              <td class="border">{{clientes.telefone}}</td>
+                              <td class="border">{{clientes.email}}</td>
+                              <td class="border">{{clientes.profissao}}</td>
+                              <td class="border">{{clientes.renda}}</td>
+                              <td class="border">{{clientes.status}}</td>
+                              <td class="border">{{clientes.endereco.rua}}</td>
+                              <td class="border">{{clientes.endereco.numero}}</td>
+                              <td class="border">{{clientes.endereco.complemento}}</td>
+                              <td class="border">{{clientes.endereco.bairro}}</td>
+                              <td class="border">{{clientes.endereco.cidade}}</td>
+                              <td class="border">{{clientes.endereco.estado}}</td>
+                         </tr>
+                    </tbody>
+
+              </table>
+              <div class="button  ">
+                   <button type="button" class="btn btn-primary btn-lg " (click)="create()">novo Cliente</button>
+              </div>
+         </div>
+
+     </div>
+</div>
+

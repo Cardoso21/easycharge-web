@@ -1,0 +1,17 @@
+.container-fluid{
+    display: flex;
+    justify-content: center;
+
+}
+.logo{
+    display: flex;
+    align-items: center;
+    width: 150px;
+
+}
+.titulo{
+    display: flex;
+
+    align-items: center;
+
+}

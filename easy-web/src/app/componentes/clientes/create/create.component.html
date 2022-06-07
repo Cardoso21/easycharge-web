@@ -1,0 +1,54 @@
+<div class="tabela">
+     <div class="card col-8 shadow-lg p-3 mb-5 bg-body rounded">
+          <div class=" col-11">
+               <form #clienteForm="ngForm" (ngSubmit)="onSubmit(clienteForm)">
+                   <div class="column col-11 pt-5">
+                         <div class="form-group col-4 px-3">
+                              <input class="form-control" name="nome" #name="ngModel"
+                              [(ngModel)]="cliente.nome" placeholder="Nome Completo" required>
+                         </div>
+                         <div class="form-group col-3 px-3">
+                              <input class="form-control" name="cpf" #name="ngModel"
+                                     [(ngModel)]="cliente.cpf" placeholder="000.000.000-00 " required>
+                         </div>
+                         <div class="form-group col-3 px-3">
+                              <input class="form-control" name="telefone" #name="ngModel"
+                                     [(ngModel)]="cliente.telefone" placeholder="(99)99999-9999" required>
+                         </div>
+                        <div class="form-group col-4 px-3">
+                             <input class="form-control" name="email" #name="ngModel"
+                                    [(ngModel)]="cliente.email" placeholder="email@email.com" required>
+                        </div>
+                   </div>
+                   <div class="column col-11 pt-5" >
+                        <div class="form-group col-4 px-3">
+                             <input class="form-control" name="profissao" #name="ngModel"
+                                    [(ngModel)]="cliente.profissao" placeholder="Profissão" required>
+                        </div>
+                        <div class="form-group col-3 px-3">
+                             <input class="form-control" name="renda" #name="ngModel"
+                                    [(ngModel)]="cliente.renda" placeholder="R$ 0,00" required>
+                        </div>
+                        <div class="form-group col-3 px-3">
+                             <input class="form-control" name="status" #name="ngModel"
+                                    [(ngModel)]="cliente.status" placeholder="Status" required>
+                        </div>
+                        <div class="form-group col-4 px-3">
+                             <input class="form-control" name="rua" #name="ngModel"
+                                    [(ngModel)]="cliente.endereco.rua" placeholder="Rua" required>
+                        </div>
+                   </div>
+                   <div class="column col-11 pt-5 pb-5">
+                        <div class="form-group col-2 px-3">
+                             <input class="form-control" name="numero" #name="ngModel"
+                                    [(ngModel)]="cliente.endereco.numero" placeholder="Numero" required>
+                        </div>
+                        <div class="form-group col-2 px-3">
+                             <input class="form-control" name="complemento" #name="ngModel"
+                                    [(ngModel)]="cliente.endereco.complemento" placeholder="Complemento" required>
+                        </div>
+                   </div>
+               </form>
+          </div>
+     </div>
+</div>
