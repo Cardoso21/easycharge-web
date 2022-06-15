@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {Cliente} from "../../../model/cliente";
 import {ClienteService} from "../../../service/cliente.service";
 import {NgForm, Validators} from "@angular/forms";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-create',
@@ -27,12 +28,23 @@ export class CreateComponent implements OnInit {
   }
 
 
-  constructor(private clinteService:ClienteService) { }
+  constructor(private clienteService:ClienteService, private router: Router) { }
 
   ngOnInit(): void {
+
   }
   onSubmit(Form:NgForm){
-    this.clinteService.create(this.cliente).subscribe(()=>this.cliente);
+    this.clienteService.create(this.cliente).subscribe(()=>this.cliente);
+
   }
 
+  create():void{
+    this.clienteService.create(this.cliente).subscribe((resl)=>{
+      this.clienteService.showMessage('Cliente Criado com Sucesso!!')
+      this.router.navigate(['/clientes'])
+    })
+  }
+  cancelar():void{
+    this.router.navigate(['/clientes'])
+  }
 }

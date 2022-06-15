@@ -1,18 +1,27 @@
-<nav class="navbar navbar-expand-lg p-3 mb-5 bg-secondary">
-     <div class="container-fluid">
-
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-               <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-               <div class="navbar-nav">
-                    <a class="nav-link " aria-current="page" href="">Home</a>
-                    <a class="nav-link" href="clientes">Clientes</a>
-                    <a class="nav-link" href="">Dividas</a>
-
-               </div>
-          </div>
-     </div>
-
-</nav>
-<router-outlet></router-outlet>
+<mat-sidenav-container >
+     <mat-sidenav class="sidenav shadow " mode="side" opened fixedInViewport="true" fixedTopGap="64">
+          <mat-nav-list class="nav-list mt-5">
+               <a mat-list-item routerLink="/">
+                    <i class="material-icons">
+                         home
+                    </i>
+                    Inicio
+               </a>
+               <a mat-list-item routerLink="/clientes">
+                    <i class="material-icons">
+                         person
+                    </i>
+                    Clientes
+               </a>
+               <a mat-list-item routerLink="/dividas">
+                    <i class="material-icons">
+                         money
+                    </i>
+                    Dividas
+               </a>
+          </mat-nav-list>
+     </mat-sidenav>
+     <mat-sidenav-content class="content"  >
+          <router-outlet></router-outlet>
+     </mat-sidenav-content>
+</mat-sidenav-container>

@@ -1,3 +1,7 @@
+.header{
+    background-image: linear-gradient(to right,#efefeb,#999797);
+
+}
 .container-fluid{
     display: flex;
     justify-content: center;
@@ -6,7 +10,7 @@
 .logo{
     display: flex;
     align-items: center;
-    width: 150px;
+    width: 250px;
 
 }
 .titulo{

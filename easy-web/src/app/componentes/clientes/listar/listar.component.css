@@ -6,9 +6,11 @@
     display: flex;
     text-align: center;
 }
-.button{
-    display: flex;
 
-    justify-content: flex-end;
+.delete{
+    color: red;
+    padding-left: 12px;
 }
-
+.edit{
+    color: black;
+}

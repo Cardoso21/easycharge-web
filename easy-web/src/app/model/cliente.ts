@@ -1,3 +1,5 @@
+import {Endereco} from "./endereco";
+
 export interface Cliente{
     id?: string
     nome: string
@@ -7,6 +9,6 @@ export interface Cliente{
     profissao: string
     renda: string
     status:string
-    endereco: any
+    endereco: Endereco
 
 }

@@ -1,6 +1,15 @@
-.menu{
 
-    width: 120px;
-
-    height: 1070px;
+.sidenav{
+    background-image: linear-gradient(#efefeb,#999797);
+    width: 200px;
+}
+.sidenav a {
+    color: #3a3737;
+}
+.sidenav i{
+    padding-right: 15px;
+}
+.content{
+    padding: 16px;
+    background-color: #ffffff;
 }

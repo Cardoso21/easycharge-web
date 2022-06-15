@@ -1,0 +1,46 @@
+<div class="d-flex justify-content-center pt-5 ">
+     <mat-card class="tabela col-9 mat-elevation-z5">
+          <div class="col-12 ">
+               <form #dividaForm="ngForm" class="col-12">
+                    <div class="column col-12 pt-5 d-flex justify-content-center">
+                         <mat-form-field appearance="fill" class="form-group col-3 px-3" required>
+                              <mat-label>Selecione um Cliente</mat-label>
+                              <mat-select>
+                                   <mat-option *ngFor="let cliente of cliente" [value]="dividas.cliente.label">
+                                        {{dividas.cliente.label}}
+                                   </mat-option>
+                              </mat-select>
+                         </mat-form-field>
+                         <mat-form-field class=" form-group col-3 px-3 " appearance="fill">
+                              <mat-label>Valor da divida</mat-label>
+                              <input matInput class="form-control"  name="valor" #name="ngModel" [(ngModel)]="dividas.valor" placeholder="R$ 0,00" required>
+                         </mat-form-field>
+                         <mat-form-field appearance="fill" class=" form-group col-3 px-3">
+                              <mat-label>Data de Abertura</mat-label>
+                              <input matInput name="dataAbertura" #name="ngModel" [(ngModel)]="dividas.dataAbertura" required>
+                              <mat-datepicker-toggle matSuffix></mat-datepicker-toggle>
+                         </mat-form-field>
+                         <mat-form-field appearance="fill" class=" form-group col-3 px-3">
+                              <mat-label>Data de Quitacao</mat-label>
+                              <input matInput name="dataQuitacao" #name="ngModel" [(ngModel)]="dividas.dataQuitacao" required>
+                              <mat-datepicker-toggle matSuffix></mat-datepicker-toggle>
+                         </mat-form-field>
+                    </div>
+                    <div class="column col-11 pt-5 d-flex justify-content-between">
+                         <mat-form-field appearance="fill" class=" form-group  col-5 px-3">
+                              <mat-label>Descrição da Divida</mat-label>
+                              <textarea matInput name="descricoa" #name="ngModel" [(ngModel)]="dividas.descricao" required></textarea>
+                         </mat-form-field>
+                         <mat-form-field appearance="fill" class=" form-group  col-3 px-3">
+                              <mat-label> Status da Divida  </mat-label>
+                              <input matInput name="statusDivida" #name="ngModel" [(ngModel)]="dividas.statusDivida" required>
+                         </mat-form-field>
+                    </div>
+               </form>
+               <div class="button  ">
+                    <button type="button" class="btn btn-primary btn-lg mt-5 " (click)="create()">Criar Divida</button>
+                    <button type="button" class="btn btn-danger mx-3 btn-lg mt-5 " (click)="cacelar()">Cancelar</button>
+               </div>
+          </div>
+     </mat-card>
+</div>

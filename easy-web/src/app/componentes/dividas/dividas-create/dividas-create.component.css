@@ -1,0 +1,11 @@
+.tabela{
+    display: flex;
+    justify-items: center;
+}
+.column{display: inline-flex}
+
+.button{
+    display: flex;
+    justify-content: flex-end;
+
+}
